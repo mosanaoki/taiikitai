@@ -54,7 +54,22 @@ export default function Hero() {
           <span className="hero-badge-dot" />
           🇹🇭 THAILAND TRIP 2026
         </div>
-        <h1 className="hero-title">タイ旅行</h1>
+        <div className="hero-title-wrap">
+          <h1 className="hero-title">タイ旅行</h1>
+          {/* キラキラ星 */}
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span
+              key={i}
+              className="hero-sparkle"
+              style={{
+                left: `${[5, 95, 50, 0, 100, 30, 70, 85][i]}%`,
+                top: `${[10, 20, -10, 50, 60, 80, -5, 45][i]}%`,
+                animationDelay: `${(i * 0.35).toFixed(2)}s`,
+                animationDuration: `${1.2 + (i % 3) * 0.4}s`,
+              }}
+            />
+          ))}
+        </div>
         <p className="hero-subtitle">- アユタヤ遺跡で消えた３人の男たち -</p>
 
         {/* ネオンラインアクセント */}
