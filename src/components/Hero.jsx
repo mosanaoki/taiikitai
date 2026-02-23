@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-badge">🇹🇭 THAILAND TRIP 2026</div>
         <h1 className="hero-title">タイ旅行</h1>
-        <p className="hero-subtitle">- アユタヤで消えた男たち -</p>
+        <p className="hero-subtitle">- アユタヤ遺跡で消えた男たち -</p>
         <div className="hero-travel-image">
           <img
             src="https://c6tnazhe5wzuantf.public.blob.vercel-storage.com/elephant.webp?"
