@@ -110,7 +110,7 @@ export const spots = [
       },
     ],
     googleMapQuery: 'Khao+San+Road+Bangkok',
-    youtubeId: '', // TODO: カオサン通りの動画IDを手動で設定
+    youtubeId: '-hlWFDgo2aM', // Khao San Road Golden hour Walking tour 2024
     website: null,
   },
   {
@@ -148,7 +148,7 @@ export const spots = [
       },
     ],
     googleMapQuery: 'Soi+Cowboy+Bangkok',
-    youtubeId: '', // TODO: ソイカウボーイの動画IDを手動で設定
+    youtubeId: 'AZ0tH50dpe8', // Soi Cowboy Bangkok walk
     website: null,
   },
   {
@@ -262,7 +262,7 @@ export const spots = [
       },
     ],
     googleMapQuery: 'Young+Place+Bangkok+Sukhumvit+23',
-    youtubeId: '', // TODO: ヤングプレイスの動画IDを手動で設定
+    youtubeId: 'DFyJwCi6X0U', // ヤングプレイス ナイトスポット紹介
     website: null,
   },
   {
@@ -300,7 +300,7 @@ export const spots = [
       },
     ],
     googleMapQuery: 'Kings+Castle+Patpong+Bangkok',
-    youtubeId: '', // TODO: キングキャッスルの動画IDを手動で設定
+    youtubeId: 'CgwRPckawxI', // パッポン ゴーゴーバー紹介
     website: null,
   },
   {
@@ -338,7 +338,7 @@ export const spots = [
       },
     ],
     googleMapQuery: 'Romeo+Juliet+Thaniya+Bangkok',
-    youtubeId: '', // TODO: ロミオとジュリエットの動画IDを手動で設定
+    youtubeId: 'QE6hGiCmvMA', // タニヤ ナイトライフ紹介
     website: 'https://romeo-juliet.net/',
   },
 ];
