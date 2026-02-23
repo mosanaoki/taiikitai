@@ -649,6 +649,11 @@ body {
   filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
 }
 
+.spot-name-wrap {
+  position: relative;
+  display: inline-block;
+}
+
 .spot-name-jp {
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 900;
@@ -657,6 +662,40 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.spot-sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  animation: sparkle 1.6s ease-in-out infinite;
+}
+
+.spot-sparkle::before,
+.spot-sparkle::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.spot-sparkle::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0 4px 1px rgba(255, 215, 0, 0.8), 0 0 8px 3px rgba(255, 215, 0, 0.4);
+}
+
+.spot-sparkle::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  box-shadow: 0 0 4px 1px rgba(255, 215, 0, 0.8), 0 0 8px 3px rgba(255, 215, 0, 0.4);
 }
 
 .spot-name-en {
