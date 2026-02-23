@@ -8,7 +8,21 @@ export default function SpotCard({ spot, index }) {
       <div className="spot-card-header">
         <span className="spot-number">{String(index + 1).padStart(2, '0')}</span>
         <span className="spot-emoji">{spot.emoji}</span>
-        <h3 className="spot-name-jp">{spot.nameJp}</h3>
+        <div className="spot-name-wrap">
+          <h3 className="spot-name-jp">{spot.nameJp}</h3>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <span
+              key={i}
+              className="spot-sparkle"
+              style={{
+                left: `${[0, 100, 50, -5, 95][i]}%`,
+                top: `${[10, 20, -15, 55, 65][i]}%`,
+                animationDelay: `${(i * 0.3).toFixed(2)}s`,
+                animationDuration: `${1.2 + (i % 3) * 0.4}s`,
+              }}
+            />
+          ))}
+        </div>
         <p className="spot-name-en">{spot.nameEn}</p>
       </div>
 

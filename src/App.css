@@ -72,6 +72,38 @@ body {
   100% { width: 180px; opacity: 1; }
 }
 
+/* タイトル キラキラシマー */
+@keyframes titleShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* タイトル グロウパルス */
+@keyframes titleGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 30px rgba(255, 180, 0, 0.4))
+            drop-shadow(0 0 60px rgba(255, 215, 0, 0.15));
+  }
+  25% {
+    filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.7))
+            drop-shadow(0 0 80px rgba(255, 107, 53, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 50px rgba(255, 45, 120, 0.5))
+            drop-shadow(0 0 100px rgba(255, 215, 0, 0.3));
+  }
+  75% {
+    filter: drop-shadow(0 0 35px rgba(255, 180, 0, 0.6))
+            drop-shadow(0 0 70px rgba(192, 132, 252, 0.3));
+  }
+}
+
+/* スパークル（星キラキラ） */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50%      { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
 /* タグ フェードイン */
 @keyframes tagFadeIn {
   0%   { opacity: 0; transform: translateY(8px); }
@@ -260,6 +292,9 @@ body {
   position: relative;
   z-index: 3;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
@@ -288,17 +323,68 @@ body {
 }
 
 .hero-title {
+  position: relative;
   font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   font-size: clamp(3.2rem, 9vw, 7.5rem);
   font-weight: 900;
   line-height: 1.05;
   margin-bottom: 14px;
-  background: linear-gradient(135deg, #fff 0%, #ffd700 45%, #ff6b35 75%, #ff2d78 100%);
+  background: linear-gradient(
+    100deg,
+    #fff 0%,
+    #ffd700 20%,
+    #fff 30%,
+    #ff6b35 50%,
+    #fffbe6 60%,
+    #ff2d78 75%,
+    #ffd700 90%,
+    #fff 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: none;
-  filter: drop-shadow(0 0 30px rgba(255, 180, 0, 0.4));
+  animation: titleShimmer 3s linear infinite, titleGlowPulse 2.5s ease-in-out infinite;
+}
+
+.hero-title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  animation: sparkle 1.6s ease-in-out infinite;
+}
+
+.hero-sparkle::before,
+.hero-sparkle::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.hero-sparkle::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0 6px 2px rgba(255, 215, 0, 0.8), 0 0 12px 4px rgba(255, 215, 0, 0.4);
+}
+
+.hero-sparkle::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px 2px rgba(255, 215, 0, 0.8), 0 0 12px 4px rgba(255, 215, 0, 0.4);
 }
 
 .hero-subtitle {
@@ -563,6 +649,11 @@ body {
   filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
 }
 
+.spot-name-wrap {
+  position: relative;
+  display: inline-block;
+}
+
 .spot-name-jp {
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 900;
@@ -571,6 +662,40 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.spot-sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  animation: sparkle 1.6s ease-in-out infinite;
+}
+
+.spot-sparkle::before,
+.spot-sparkle::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.spot-sparkle::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0 4px 1px rgba(255, 215, 0, 0.8), 0 0 8px 3px rgba(255, 215, 0, 0.4);
+}
+
+.spot-sparkle::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  box-shadow: 0 0 4px 1px rgba(255, 215, 0, 0.8), 0 0 8px 3px rgba(255, 215, 0, 0.4);
 }
 
 .spot-name-en {
