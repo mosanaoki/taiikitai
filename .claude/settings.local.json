@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx vite build)"
+      "Bash(npx vite build)",
+      "WebFetch(domain:brad-bury.com)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)"
     ]
   }
 }
