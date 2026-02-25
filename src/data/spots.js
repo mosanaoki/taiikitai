@@ -376,7 +376,7 @@ export const spots = [
       },
     ],
     googleMapQuery: "SkyFlyers+Asiatique+Bangkok",
-    youtubeId: "",
+    youtubeId: "SBp66o-ixDo",
     website: "https://skyflyersbkk-online.globaltix.com/",
   },
 ];
