@@ -341,4 +341,42 @@ export const spots = [
     youtubeId: "JzUHG1l91Do", // TODO: ロミオとジュリエットの動画IDを手動で設定
     website: "https://romeo-juliet.net/",
   },
+  {
+    id: 10,
+    emoji: "🎢",
+    nameJp: "SkyFlyers（スカイフライヤーズ）",
+    nameEn: "SkyFlyers: Wings of Garudapterus at Asiatique",
+    description:
+      "バンコクの人気観光スポット「アジアティーク・ザ・リバーフロント」に誕生した話題の絶叫アトラクション！アジア太平洋地域で最も高い約135mの巨大ブランコ型スイングライドで、まるで空を飛んでいるかのような感覚を体験できる。テーマは翼竜「Garudapterus」で、古生物の世界観を楽しめるストーリー仕立てが他にはないポイント。バンコクの街並み・チャオプラヤー川を360°パノラマビューで体感でき、日没〜夜はライトアップされた都市景観が圧巻！男3人で絶叫しながら乗れば最高の思い出になること間違いなし！",
+    info: [
+      { icon: "🕐", text: "16:00〜23:00" },
+      { icon: "💴", text: "約320バーツ〜" },
+      { icon: "🚢", text: "BTS サパーンタクシン駅から無料シャトルボート" },
+    ],
+    reviews: [
+      {
+        stars: 5,
+        text: "135mの高さから見るバンコクの夜景が鳥肌もの！チャオプラヤー川沿いのライトアップが最高に綺麗だった。",
+        author: "旅行者A（20代男性）",
+      },
+      {
+        stars: 5,
+        text: "アジアティークで買い物・夕食のあとにこれ乗ったら最高のフィナーレ。絶叫系好きなら絶対行くべき！",
+        author: "旅行者B（30代男性）",
+      },
+      {
+        stars: 4,
+        text: "翼竜テーマの世界観がしっかり作り込まれてて、待ち時間も楽しめた。写真映えもバッチリ。",
+        author: "旅行者C（30代男性）",
+      },
+      {
+        stars: 5,
+        text: "無料シャトルボートで行けるのが嬉しい。川風を浴びながらのアクセスも含めて最高の体験だった！",
+        author: "旅行者D（20代男性）",
+      },
+    ],
+    googleMapQuery: "SkyFlyers+Asiatique+Bangkok",
+    youtubeId: "SBp66o-ixDo",
+    website: "https://skyflyersbkk-online.globaltix.com/",
+  },
 ];
